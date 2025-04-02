@@ -30,17 +30,14 @@ namespace BetterColorSpheres
             _alpha = 255;
         }
 
-        public byte Red => _red;
-        public byte Green => _green;
-        public byte Blue => _blue;
-        public byte Alpha
-        {
-            get => _alpha;
-            set => _alpha = value;
-        }
+        public byte GetRed => _red;
+        public byte GetGreen => _green;
+        public byte GetBlue => _blue;
+        public byte GetAlpha => _alpha;
 
 
-        public byte Grey => (byte)((_red + _green + _blue) / 3);
+
+        public byte GetGrey => (byte)((_red + _green + _blue) / 3);
 
     }
 
