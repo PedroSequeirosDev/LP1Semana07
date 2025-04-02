@@ -8,9 +8,9 @@ namespace ColorSpheres
 {
     public class Color
     {
-        private byte _red;
-        private byte _green;
-        private byte _blue;
+        private readonly byte _red;
+        private readonly byte _green;
+        private readonly byte _blue;
         private byte _alpha;
 
 
@@ -50,40 +50,6 @@ namespace ColorSpheres
         public byte GetGrey()
         {
             return (byte)((_red + _green + _blue) / 3);
-        }
-    }
-
-    public class Sphere
-    {
-        private float _radius;
-        private Color color;
-        private int _bounces;
-
-
-
-        public Sphere(float radius, Color color)
-        {
-            _radius = radius;
-            this.color = color;
-            _bounces = 0;
-        }
-
-        public void Pop()
-        {
-            _radius = 0;
-        }
-
-        public void Throw()
-        {
-            if (_radius > 0)
-            {
-                _bounces++;
-            }
-        }
-
-        public int GetTimesThrown()
-        {
-            return _bounces;
         }
     }
 
