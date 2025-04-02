@@ -12,9 +12,9 @@ namespace ColorSpheres
         private Byte _green;
         private Byte _blue;
         private Byte _alpha;
-    }
-     
-     public Color(byte red, byte green, byte blue, byte alpha)
+
+
+        public Color(byte red, byte green, byte blue, byte alpha)
         {
             _red = red;
             _green = green;
@@ -30,4 +30,26 @@ namespace ColorSpheres
             _alpha = 255;
         }
 
+        public byte GetRed()
+        {
+            return _red;
+        }
+        public byte GetGreen()
+        {
+            return _green;
+        }
+        public byte GetBlue()
+        {
+            return _blue;
+        }
+        public byte GetAlpha()
+        {
+            return _alpha;
+        }
+
+        public byte GetGrey()
+        {
+            return (byte)((_red + _green + _blue) / 3);
+        }
     }
+}
