@@ -15,7 +15,43 @@ namespace PlayerStats
 
         private float ValueofRun;
 
-        private readonly string name;
+
+
+
+
+        public float HighScore
+        {
+            get => highScore;
+            set
+            {
+                if (ValueofRun > highScore)
+                {
+                    highScore = value;
+                }
+            }
+        }
+
+        public string Name { get; }
+
+        public float WinRate
+        {
+            get
+            {
+                if (playedGames > 0)
+                {
+                    return (float)wonGames / playedGames;
+                }
+
+                else
+                {
+                    return 0;
+                }
+
+
+            }
+
+
+        }
 
 
     }
