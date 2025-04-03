@@ -13,7 +13,6 @@ namespace PlayerStats
 
         private int wonGames;
 
-        private float ValueofRun;
 
 
 
@@ -24,7 +23,7 @@ namespace PlayerStats
             get => highScore;
             set
             {
-                if (ValueofRun > highScore)
+                if (value > highScore)
                 {
                     highScore = value;
                 }
@@ -59,6 +58,15 @@ namespace PlayerStats
             {
                 wonGames++;
             }
+        }
+
+        public Player(string name)
+        {
+            Name = name;
+            playedGames = 0;
+            wonGames = 0;
+            highScore = 0;
+
         }
 
 
