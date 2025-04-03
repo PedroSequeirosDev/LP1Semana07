@@ -47,10 +47,18 @@ namespace PlayerStats
                     return 0;
                 }
 
-
             }
 
 
+        }
+
+        public void PlayGame(bool win)
+        {
+            playedGames++;
+            if (win)
+            {
+                wonGames++;
+            }
         }
 
 
