@@ -42,9 +42,13 @@ namespace MyRoguelike
                 {
                     health = value;
                 }
-                else if (health <= 0)
+                else if (value <= 0)
                 {
                     health = 0;
+                }
+                else if (value >= MaxHealth)
+                {
+                    health = MaxHealth;
                 }
             }
         }
