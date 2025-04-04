@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -26,6 +27,10 @@ namespace MyRoguelike
             }
         }
 
+        public int Level
+        {
+            get => 1 + XP / 1000;
+        }
     }
 
 
