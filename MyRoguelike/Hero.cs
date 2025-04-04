@@ -12,5 +12,22 @@ namespace MyRoguelike
 
 
         public string Name { get; }
+
+        public int XP
+        {
+            get => xp;
+            set
+            {
+                if (value > xp)
+                {
+                    xp = value;
+                }
+
+            }
+        }
+
     }
+
+
+
 }
