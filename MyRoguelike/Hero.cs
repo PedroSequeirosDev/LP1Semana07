@@ -37,7 +37,7 @@ namespace MyRoguelike
             get => health;
             set
             {
-                if (value > 0 && value < Maxhealth)
+                if (value > 0 && value < MaxHealth)
                 {
                     health = value;
                 }
@@ -46,6 +46,11 @@ namespace MyRoguelike
                     health = 0;
                 }
             }
+        }
+
+        public float MaxHealth
+        {
+            get => 100 + (Level - 1) * 20;
         }
 
 
