@@ -9,7 +9,7 @@ classDiagram
     +Sphere(Color color, float radius)
     +Pop() void
     +Throw() void
-    +GetTimesThrown() int
+  
 
     }
 
