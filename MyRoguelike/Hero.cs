@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Threading.Tasks;
@@ -54,6 +55,18 @@ namespace MyRoguelike
         }
 
 
+        public void TakeDamage(float damage)
+        {
+            Health -= damage;
+            XP += (int)(damage / 20);
+        }
+
+        public Hero(string name)
+        {
+            Name = name;
+            health = MaxHealth;
+            xp = 0;
+        }
 
     }
 }
