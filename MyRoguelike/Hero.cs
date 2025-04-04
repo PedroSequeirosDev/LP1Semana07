@@ -9,5 +9,8 @@ namespace MyRoguelike
     {
         private int xp;
         private float health;
+
+
+        public string Name { get; }
     }
 }
